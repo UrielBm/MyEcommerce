@@ -1,0 +1,111 @@
+.titleproduct {
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: var(--title);
+  color: var(--action);
+  margin-bottom: 1rem;
+  @media (min-width: 992px) {
+    margin: 1rem 0;
+    font-size: 2.4rem;
+  }
+}
+.product {
+  width: 100%;
+  min-height: 100vh;
+  @media (min-width: 992px) {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    min-height: auto;
+  }
+  .wrapperImg {
+    width: 100%;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+    .img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .wrapperInfo {
+    border-top: 2px solid var(--light);
+    padding: 1rem;
+    @media (min-width: 992px) {
+      border: none;
+      padding: 2rem;
+    }
+    .wrapperData {
+      margin-bottom: 1rem;
+      .Subtitle {
+        color: var(--light);
+        text-emphasis: start;
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        @media (min-width: 992px) {
+          font-size: 1.8rem;
+        }
+      }
+      .data {
+        font-size: 1.1rem;
+        text-align: justify;
+        @media (min-width: 992px) {
+          font-size: 1.3rem;
+        }
+        &::first-letter {
+          color: var(--action);
+          text-transform: uppercase;
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+      }
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        .likes {
+          font-size: 1.1rem;
+          text-align: justify;
+          &::first-letter {
+            color: var(--action);
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          .status-bad {
+            font-weight: 700;
+            color: var(--danger);
+          }
+          .status-medium {
+            @extend .status-bad;
+            color: var(--warning);
+          }
+          .status-good {
+            @extend .status-bad;
+            color: var(--good);
+          }
+        }
+        .votes {
+          @extend .likes;
+        }
+      }
+    }
+    .wrapperButton {
+      width: 100%;
+      .actionButton {
+        border: none;
+        background-color: var(--light);
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        color: var(--white);
+        font-weight: 700;
+        font-size: 1.1rem;
+        width: 100%;
+      }
+    }
+  }
+}

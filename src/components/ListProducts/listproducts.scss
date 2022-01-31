@@ -1,0 +1,28 @@
+.listProducts {
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .wrapperTitle {
+    width: 16rem;
+    border-bottom: solid 3px var(--light);
+    padding-bottom: 0.5rem;
+    .sectionTitle {
+      color: var(--action);
+      font-size: 1.7rem;
+      font-family: var(--font);
+      font-weight: 700;
+    }
+  }
+  .wrapperProducts {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    @media (min-width: 992px) {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      // align-items: baseline;
+    }
+  }
+}

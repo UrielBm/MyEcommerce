@@ -1,0 +1,118 @@
+.form {
+  width: 100%;
+  min-height: 83.9vh;
+  padding: 0 0.5rem;
+  @media (min-width: 758px) {
+    padding: 5rem;
+    margin: 0 auto;
+    width: 60rem;
+  }
+  .title {
+    text-align: center;
+    font-family: var(--title);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--action);
+    @media (min-width: 992px) {
+      font-size: 2.5rem;
+    }
+  }
+  .wrapperInput {
+    margin-bottom: 1rem;
+    @media (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2rem;
+    }
+    .label {
+      display: block;
+      margin-bottom: 0.5rem;
+      @media (min-width: 992px) {
+        width: 40%;
+        font-size: 1.3rem;
+      }
+    }
+    .input {
+      width: 100%;
+      padding: 0.3rem 0.5rem;
+      border: 1px solid var(--light);
+      border-radius: 0.5rem;
+      @media (min-width: 992px) {
+        padding: 0.5rem 1rem;
+      }
+    }
+    .wrapperPassword {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid var(--light);
+      border-radius: 0.5rem;
+      @media (min-width: 992px) {
+        width: 100%;
+      }
+      .input {
+        border: none;
+        width: 100%;
+        height: 100%;
+        outline: none;
+      }
+    }
+  }
+  .wrapperLink {
+    margin-bottom: 1rem;
+    .link {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: var(--light);
+      @media (min-width: 992px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .wrapperActionButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .FormButton {
+      cursor: pointer;
+      width: 100%;
+      padding: 0.5rem 0;
+      background-color: var(--action);
+      border: none;
+      border-radius: 1rem;
+      color: var(--white);
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: ease-in-out 0.5s;
+      @media (min-width: 992px) {
+        font-size: 1.3rem;
+      }
+      &:disabled {
+        background-color: var(--disabled);
+        text-transform: lowercase;
+        width: 50%;
+      }
+    }
+  }
+  .wrapperErrors {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--danger);
+    @media (min-width: 992px) {
+      display: flex;
+      align-items: baseline;
+    }
+    .errors {
+      margin-top: 0.3rem;
+      text-transform: lowercase;
+      font-size: 0.9rem;
+      @media (min-width: 992px) {
+        margin-top: 0;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

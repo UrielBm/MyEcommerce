@@ -1,0 +1,29 @@
+.wrapperNofound {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 3rem;
+  @media (min-width: 992px) {
+    margin: 0 auto;
+    width: 60rem;
+  }
+  .imgNoFound {
+    width: 100%;
+    @media (min-width: 992px) {
+      width: 20rem;
+    }
+  }
+}
+.return {
+  display: block;
+  margin: 0 auto;
+  width: 20rem;
+  text-align: center;
+  background-color: var(--action);
+  padding: 0.5rem;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 1.3rem;
+  color: var(--white);
+  text-decoration: none;
+}

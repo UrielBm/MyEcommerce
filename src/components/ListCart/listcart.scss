@@ -1,0 +1,32 @@
+.wrapperListCart {
+  width: 100%;
+  padding: 0 0.5rem;
+  @media (min-width: 992px) {
+    margin: 0 auto;
+    max-width: 90rem;
+  }
+  .noArticles {
+    text-align: center;
+    color: var(--disabled);
+    font-size: 0.9rem;
+    font-style: italic;
+    @media (min-width: 992px) {
+      font-size: 1.5rem;
+    }
+  }
+  .listProducts {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .wrapperTotal {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--action);
+    margin-bottom: 1rem;
+    .total {
+      color: var(--good);
+      font-family: var(--title);
+      font-size: 1.5rem;
+    }
+  }
+}

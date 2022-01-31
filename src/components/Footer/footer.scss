@@ -1,0 +1,11 @@
+.footer {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: var(--light);
+  .legend {
+    font-family: var(--font);
+    font-weight: 300;
+    color: var(--black);
+    text-align: center;
+  }
+}

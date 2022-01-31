@@ -1,0 +1,40 @@
+.nav {
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+    .item {
+      text-decoration: none;
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      @media (min-width: 992px) {
+        margin-bottom: 0;
+      }
+    }
+    .wrapperUser {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 992px) {
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .user {
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--black);
+        margin-bottom: 1rem;
+        @media (min-width: 992px) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

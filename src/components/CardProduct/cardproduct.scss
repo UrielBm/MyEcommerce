@@ -1,0 +1,102 @@
+.cardProduct {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: none;
+  @media (min-width: 992px) {
+    width: 22rem;
+    height: 40rem;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+  .wrapperImg {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    @media (min-width: 992px) {
+      display: flex;
+      height: 25rem;
+    }
+    .image {
+      width: 100%;
+      @media (min-width: 992px) {
+        max-height: 100%;
+        object-fit: scale-down;
+      }
+    }
+  }
+  .wrapperData {
+    width: 100%;
+    @media (min-width: 992px) {
+      height: 15rem;
+    }
+    .rating {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      .likes {
+        display: flex;
+      }
+    }
+    .category {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .titleArticle {
+      @extend .category;
+      font-weight: 700;
+      color: var(--action);
+    }
+    .description {
+      @extend .category;
+    }
+    .price {
+      @extend .category;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--light);
+    }
+    .wrapperCart {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .CartButton {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        color: var(--black);
+        font-weight: 700;
+        justify-content: space-between;
+      }
+    }
+    .type {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-right: 0.4rem;
+    }
+    .actionButton {
+      display: block;
+      background-color: var(--action);
+      border-radius: 2rem;
+      width: 100%;
+      align-items: center;
+      padding: 0.6rem 0;
+      text-align: center;
+      text-decoration: none;
+      color: var(--white);
+      outline: none;
+      transition: ease-in-out 0.5s;
+      &:hover {
+        background-color: var(--light);
+      }
+    }
+  }
+}

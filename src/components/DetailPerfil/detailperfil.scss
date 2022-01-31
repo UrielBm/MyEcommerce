@@ -1,0 +1,74 @@
+.wrapperMyPerfil {
+  width: 100%;
+  padding: 0 1rem;
+  @media (min-width: 992px) {
+    display: flex;
+    margin: 0 auto;
+    width: 60rem;
+    align-items: center;
+  }
+  .wrapperAvatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    @media (min-width: 992px) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+    .avatar {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      object-fit: cover;
+      @media (min-width: 992px) {
+        width: 24rem;
+        height: 24rem;
+      }
+    }
+  }
+  .wrapperUserData {
+    @media (min-width: 992px) {
+      width: 50%;
+    }
+    .item {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      @media (min-width: 992px) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      &::first-letter {
+        color: var(--action);
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      .data {
+        font-weight: 700;
+        color: var(--black);
+      }
+    }
+    .wrapperAddress {
+      margin-top: 1rem;
+      h5 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--light);
+      }
+      .wrapperData {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+.wrapperEdit {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 10rem;
+  @media (min-width: 992px) {
+    right: 20rem;
+  }
+}

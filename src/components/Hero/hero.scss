@@ -1,0 +1,52 @@
+.hero {
+  background-image: url("../../assets/hero2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 15rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  @media (min-width: 992px) {
+    min-height: 30rem;
+  }
+  .title {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--title);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    @media (min-width: 992px) {
+      font-size: 5rem;
+    }
+  }
+  .actionButton {
+    background-color: var(--action);
+    border-radius: 2rem;
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    width: 12rem;
+    outline: none;
+    transition: ease-in-out 0.5s;
+    @media (min-width: 992px) {
+      padding: 0.6rem 0;
+      width: 20rem;
+      font-size: 1.5rem;
+    }
+    &:hover {
+      width: 18rem;
+      @media (min-width: 992px) {
+        width: 25rem;
+      }
+    }
+  }
+}
+.hero_logged {
+  @extend .hero;
+  background-image: url("./../../assets/hero_login.jpg");
+}

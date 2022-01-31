@@ -1,0 +1,26 @@
+.historyProduct {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  .link {
+    width: 15rem;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--dissabled);
+    text-decoration: none;
+    font-weight: 300;
+    @media (min-width: 992px) {
+      width: 60rem;
+      font-size: 1.3rem;
+    }
+  }
+  .quantity {
+    @media (min-width: 992px) {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+}
