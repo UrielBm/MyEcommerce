@@ -48,7 +48,7 @@ const CardProduct = ({ product }) => {
           )}
         </div>
         <Link className="actionButton" to={`/producto/${id}`}>
-          + Aceca del producto
+          + Acerca del producto
         </Link>
       </div>
     </article>
