@@ -1,10 +1,10 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import brand1 from "./../../assets/brad1.png";
-import brand2 from "./../../assets/brad2.png";
-import brand3 from "./../../assets/brad3.png";
-import brand4 from "./../../assets/brad4.png";
+import brand1 from "./../../assets/brand1.png";
+import brand2 from "./../../assets/brand2.png";
+import brand3 from "./../../assets/brand3.png";
+import brand4 from "./../../assets/brand4.png";
 import "./carrousel.scss";
 
 const responsive = {
@@ -36,16 +36,26 @@ const CarrouselBrands = () => {
       removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
     >
       <div className="wrapperBrand">
-        <img className="brand" src={brand1} alt="brand wester digital" />
+        <img
+          loading="lazy"
+          className="brand"
+          src={brand1}
+          alt="brand wester digital"
+        />
       </div>
       <div className="wrapperBrand">
-        <img className="brand" src={brand2} alt=" brand -2" />
+        <img
+          loading="lazy"
+          className="brand"
+          src={brand2}
+          alt="brand samnsung"
+        />
       </div>
       <div className="wrapperBrand">
-        <img className="brand" src={brand3} alt=" brand -2" />
+        <img loading="lazy" className="brand" src={brand3} alt="brand acer" />
       </div>
       <div className="wrapperBrand">
-        <img className="brand" src={brand4} alt=" brand -2" />
+        <img loading="lazy" className="brand" src={brand4} alt="brand HM" />
       </div>
     </Carousel>
   );
