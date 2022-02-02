@@ -84,9 +84,9 @@ export const AddProduct = (cart, newproduct) => {
 };
 export const SetTotal = (cart) => {
   let total = 0;
-  cart.map(({ totalPrice }) => {
-    total = total + totalPrice;
-  });
+  for (let i = 0; i < cart.length; i++) {
+    total = total + cart[i].totalPrice;
+  }
   return total;
 };
 
