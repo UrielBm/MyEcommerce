@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("../../assets/hero2.jpg");
+  background-image: url("../../assets/hero2_mobile.webp");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -10,6 +10,7 @@
   margin-bottom: 1.5rem;
   width: 100%;
   @media (min-width: 992px) {
+    background-image: url("../../assets/hero2.webp");
     min-height: 30rem;
   }
   .title {
@@ -48,5 +49,8 @@
 }
 .hero_logged {
   @extend .hero;
-  background-image: url("./../../assets/hero_login.jpg");
+  background-image: url("./../../assets/hero_login_mobile.webp");
+  @media (min-width: 992px) {
+    background-image: url("./../../assets/hero_login.webp");
+  }
 }
