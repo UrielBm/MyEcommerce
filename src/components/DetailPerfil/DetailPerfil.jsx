@@ -1,7 +1,7 @@
 import React from "react";
 import UseUserLoged from "../../hooks/UseUserLoged";
 import Edit from "../Icons/Edit";
-import avatar from "./../../assets/avatar.jpg";
+import avatar from "./../../assets/avatar.webp";
 import "./detailperfil.scss";
 const DetailPerfil = ({ setisForm }) => {
   const { user } = UseUserLoged();
@@ -10,7 +10,12 @@ const DetailPerfil = ({ setisForm }) => {
     <>
       <div className="wrapperMyPerfil">
         <div className="wrapperAvatar">
-          <img className="avatar" src={avatar} alt="avatr perfil" />
+          <img
+            loading="lazy"
+            className="avatar"
+            src={avatar}
+            alt="avatar perfil"
+          />
         </div>
         <div className="wrapperUserData">
           <p className="item">
@@ -32,7 +37,7 @@ const DetailPerfil = ({ setisForm }) => {
                 Calle: <span className="data">{address.street}</span>
               </p>
               <p className="item">
-                C.p: <span className="data">{address.zipcode}</span>{" "}
+                C.p: <span className="data">{address.zipcode}</span>
               </p>
               <p className="item">
                 No: <span className="data">{address.number}</span>
