@@ -5,6 +5,7 @@ import UseGetProducts from "../hooks/UseGetProducts";
 const Jewelery = () => {
   useEffect(() => {
     HandleGetProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const { products, isLoading, HandleGetProducts } = UseGetProducts("jewelery");
   return (

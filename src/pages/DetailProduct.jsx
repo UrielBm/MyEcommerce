@@ -10,6 +10,7 @@ const DetailProduct = () => {
   const [isLoading, setisLoading] = useState(true);
   useEffect(() => {
     handleGetProduct();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const handleGetProduct = async () => {
     try {

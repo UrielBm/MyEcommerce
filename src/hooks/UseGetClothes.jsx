@@ -4,6 +4,7 @@ const UseGetClothes = () => {
   useEffect(() => {
     HandleGetProducts();
     GetRopa();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const [select, Setselect] = useState(1);
   const { products, isLoading, HandleGetProducts } =

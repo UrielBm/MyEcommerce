@@ -1,16 +1,15 @@
-import { useCallback, useReducer } from "react";
+import {  useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMyUser, loginUser, registerUser, updating } from "../../axios/user";
 import { DO_LOGIN, DO_REGISTER, UPDATE_USER } from "../../types";
 import { BadAlert, GoodAlert } from "../../utils";
 import UserContext from "./UserContext";
 import UserReducer from "./UserReducer";
-
 const UserState = (props) => {
   const initialState = {
     user: {},
     isLoged: false,
-  };
+  };  
   const navigate = useNavigate();
   const [state, dispatch] = useReducer(UserReducer, initialState);
 

@@ -10,6 +10,7 @@ const Perfil = () => {
   const { handleStatus } = UserRedirect();
   useEffect(() => {
     handleStatus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (isloged) {
     return (

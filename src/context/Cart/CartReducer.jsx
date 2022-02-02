@@ -16,6 +16,8 @@ const CartReducer = (state, action) => {
         cart: deleteProduct(state.cart, action.payload),
         total: SetTotal(deleteProduct(state.cart, action.payload)),
       };
+      default:
+        return state
   }
 };
 

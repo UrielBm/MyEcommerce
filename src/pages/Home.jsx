@@ -9,6 +9,7 @@ const Home = () => {
   useEffect(() => {
     HandleGetProducts();
     HandleMostPopular();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const { products, isLoading, HandleGetProducts } = UseGetProducts(
