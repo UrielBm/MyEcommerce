@@ -1,4 +1,4 @@
-import {  useReducer } from "react";
+import { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { getMyUser, loginUser, registerUser, updating } from "../../axios/user";
 import { DO_LOGIN, DO_REGISTER, UPDATE_USER } from "../../types";
@@ -9,7 +9,7 @@ const UserState = (props) => {
   const initialState = {
     user: {},
     isLoged: false,
-  };  
+  };
   const navigate = useNavigate();
   const [state, dispatch] = useReducer(UserReducer, initialState);
 
@@ -89,6 +89,7 @@ const UserState = (props) => {
     };
     try {
       await updating(editUser, user.id);
+      editUser.id = user.id;
       dispatch({
         type: UPDATE_USER,
         payload: editUser,
