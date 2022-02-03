@@ -7,7 +7,7 @@ import UseCart from "../../hooks/UseCart";
 import NoFound from "../NoFound";
 
 const Product = ({ product }) => {
-  if (product === undefined) {
+  if (product === null) {
     return <NoFound />;
   }
   const { category, description, image, price, rating, title } = product;
