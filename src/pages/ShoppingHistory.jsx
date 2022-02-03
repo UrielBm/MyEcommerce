@@ -7,15 +7,12 @@ import UseUserLoged from "../hooks/UseUserLoged";
 import "./../styles/pages.scss";
 const ShoppingHistory = () => {
   const { user } = UseUserLoged();
-  const { pedidos, isLoading, handleGetCart } = UseHistory();
+  const { pedidos, isLoading } = UseHistory(user.id);
   const { handleStatus } = UserRedirect();
   useEffect(() => {
     handleStatus();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  useEffect(() => {
-    handleGetCart(user.id);
-  }, [user.id,handleGetCart]);
   return (
     <section className="section">
       <h2 className="categorieTitle">Mi historial de compras</h2>

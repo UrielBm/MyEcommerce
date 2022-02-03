@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import CarrouselBrands from "../components/CarrouselBrands";
 import Hero from "../components/Hero";
 import ListProducts from "../components/ListProducts";
@@ -6,18 +5,8 @@ import UseGetMostPopular from "../hooks/UseGetMostPopular";
 import UseGetProducts from "../hooks/UseGetProducts";
 import "./../styles/pages.scss";
 const Home = () => {
-  useEffect(() => {
-    HandleGetProducts();
-    HandleMostPopular();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const { products, isLoading, HandleGetProducts } = UseGetProducts(
-    "electronics",
-    3
-  );
-  const { mostPopular, popularLoading, HandleMostPopular } =
-    UseGetMostPopular();
+  const { products, isLoading } = UseGetProducts("electronics", 3);
+  const { mostPopular, popularLoading } = UseGetMostPopular();
   return (
     <main className="section">
       <Hero />

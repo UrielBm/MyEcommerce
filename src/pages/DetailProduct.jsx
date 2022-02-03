@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetProdoctById } from "../axios/getProducts";
 import Product from "../components/Product";
@@ -8,19 +8,29 @@ const DetailProduct = () => {
   const { id } = useParams();
   const [product, Setproduct] = useState({});
   const [isLoading, setisLoading] = useState(true);
+  const handleGetProduct = useCallback(
+    async (isUnmount) => {
+      if (!isUnmount) {
+        try {
+          const response = await GetProdoctById(id);
+          Setproduct(response.data);
+          setisLoading(false);
+        } catch (error) {
+          setisLoading(false);
+        }
+      }
+    },
+    [id]
+  );
+
   useEffect(() => {
-    handleGetProduct();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  const handleGetProduct = async () => {
-    try {
-      const response = await GetProdoctById(id);
-      Setproduct(response.data);
-      setisLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    let isUnmount = false;
+    handleGetProduct(isUnmount);
+    return () => {
+      isUnmount = true;
+      handleGetProduct(isUnmount);
+    };
+  }, [handleGetProduct]);
   return (
     <section className="section">
       {isLoading ? <Spinner /> : <Product product={product} />}
